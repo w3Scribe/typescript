@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "module": "NodeNext",
+    "sourceMap": false,
+    "noUnusedLocals": false,
+    "removeComments": true,
+    "noEmitOnError": true,
+    "outDir": "dist",
+    "moduleResolution": "NodeNext"
+  },
+  "include": ["src/**/*.ts",  "./*.ts"],
+  "exclude": ["node_modules/**/*.ts"]
+}
