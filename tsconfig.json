@@ -8,8 +8,12 @@
     "removeComments": true,
     "noEmitOnError": true,
     "outDir": "dist",
-    "moduleResolution": "NodeNext"
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*.ts",  "./*.ts"],
-  "exclude": ["node_modules/**/*.ts"]
+  "include": ["src/**/*.ts", "./*.ts"],
+  "exclude": ["node_modules/**/*.ts"],
+  "watch": true
 }
+  

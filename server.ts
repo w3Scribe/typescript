@@ -6,8 +6,9 @@ const PORT: number = env_variable.PORT
 const MONGO_DB_BASE_URL: string = env_variable.MONGO_DB_BASE_URL as string
 const COLLECTION_NAME: string = 'myapp'
 
-app.listen(PORT, () => {
-  console.clear()
+app.listen(PORT, () => {     
   connectDB(`${MONGO_DB_BASE_URL}/${COLLECTION_NAME}`)
   console.log(`Server it started http://localhost:${PORT}`)
 })  
+
+console.log('Hello World!')  

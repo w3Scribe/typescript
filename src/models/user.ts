@@ -1,15 +1,15 @@
-import mongoose, { Schema, SchemaOptions, SchemaType } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
-// Specifing the types to the schema for the type safety
-type userTypes = SchemaType & SchemaOptions & {
-  firstName: string
-  lastName: string
-  location: string
-  emailId: string
+// Define the user schema types for type safety
+export interface UserSchema {
+  firstName: string;
+  lastName: string;
+  location: string;
+  emailId: string;
 }
 
-// this is the user schem the with the strong user types safety
-const user_schema = new Schema<userTypes>({
+// Define the user schema with strong type safety
+const userSchema = new Schema<UserSchema>({
   firstName: {
     type: String,
     required: true
@@ -27,8 +27,7 @@ const user_schema = new Schema<userTypes>({
     required: true,
     unique: true
   },
-});
+}, { timestamps: true });
 
-// exporting the user module for the further usage  
-export const Users = mongoose.model('users', user_schema);
-
+// Export the User model for further usage
+export const Users = mongoose.model('users', userSchema);

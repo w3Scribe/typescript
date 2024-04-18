@@ -1,11 +1,12 @@
 import express, { Router, Request, Response } from "express";
-import { getHomePage } from "../controllers";
+import { getUsers, getUsersPost } from "../controllers";
 
 // creating the Router
 const userRouter: Router = express.Router()
 
-// home page route
+// /users route
 userRouter.route('/')
-  .get(getHomePage)
+  .get(getUsers)
+  .post(getUsersPost)
 
 export default userRouter
