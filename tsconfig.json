@@ -4,7 +4,7 @@
     "target": "ES2022",
     "module": "NodeNext",
     "sourceMap": false,
-    "noUnusedLocals": false,
+    "noUnusedLocals": true,
     "removeComments": true,
     "noEmitOnError": true,
     "outDir": "dist",
@@ -13,7 +13,5 @@
     "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*.ts", "./*.ts"],
-  "exclude": ["node_modules/**/*.ts"],
-  "watch": true
+  "exclude": ["node_modules/**/*.ts"]
 }
-  

@@ -1,18 +1,17 @@
-import { Request, Response } from "express";
-import { appendFile, readFile } from "fs/promises";
-import { Users, UserSchema } from "../models/user";
-import { MongooseError } from "mongoose";
+import { Users } from "../models/user";
+import { UserRequest } from "../types/types";
 
-export const getUsers = async (req: Request, res: Response) => {
+export const getUsers: UserRequest = async (_req, res, next) => {
   try {
-    const data = await Users.find()
-    res.status(200).send(data)
+    const data = await Users.find();
+    res.status(200).send(data);
   } catch (error) {
-    res.status(500).send('error getting users')
+    // If an error occurs, pass it to the global error handler
+    next?.(error)
   }
 }
 
-export const getUsersPost = async (req: Request, res: Response) => {
+export const getUsersPost: UserRequest = async (req, res) => {
   try {
     const newUser = new Users({
       firstName: req.body.firstName,
@@ -22,7 +21,7 @@ export const getUsersPost = async (req: Request, res: Response) => {
     })
     await newUser.save()
     res.status(201).json({ msg: "user created successfully", user: newUser })
-  } catch (error) {  
+  } catch (error) {
     res.status(500).json({ msg: "error creating user", error: error })
   }
 }
