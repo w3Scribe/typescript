@@ -137,3 +137,4 @@ tsconfig.json
 eslint.config.mjs
 index.ts
 /docs
+/src
