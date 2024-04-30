@@ -5,9 +5,7 @@
   "main": "server.ts",
   "type": "commonjs",
   "scripts": {
-    "start": "node ./dist/app.js",
-    "build": "tsc",
-    "dev": "tsnd --cls --respawn server.ts"
+    "dev": "tsnd --cls --respawn index.ts"
   },
   "keywords": [
     "restAPI, NodeJS, express"
