@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ES2022",
+    "module": "NodeNext",
+    "sourceMap": false,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "noEmitOnError": true,
+    "outDir": "dist",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*.ts", "./*.ts"],
+  "exclude": ["node_modules/**/*.ts"]
+}

@@ -130,11 +130,11 @@ dist
 .pnp.*
 
 # add all files and folders expting the REDADME.md
-.prettierrc
-package.json
-package-lock.json
-tsconfig.json
-eslint.config.mjs
-index.ts
+# .prettierrc
+# package.json
+# package-lock.json
+# tsconfig.json
+# eslint.config.mjs
+# index.ts
 /docs
 /src
